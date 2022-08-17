@@ -9,6 +9,7 @@ body{
     line-height: 1.5;
     background-color: black;
     color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 .contenedor{
@@ -50,13 +51,12 @@ body{
 
 .navegacion__enlace{
     text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
     text-decoration: none;
     color: white;
     padding: 1rem;
     margin: .5rem 2rem;
     text-align: center;
-    font-weight: bolder;
+    font-weight: 700;
 }
 
 .navegacion__enlace:hover{
@@ -64,13 +64,14 @@ body{
     background-color: white;
 }
 
-/* Main */
+/* Background con video */
 
-main{
+#bgPrincipal{
     width: 100%;
     height: auto;
     position: relative;
     overflow: hidden;
+    margin-bottom: 5rem;
 }
 
 .sect{
@@ -101,7 +102,6 @@ video{
 }
 
 .absolute h1{
-    font-family: 'Roboto', sans-serif;
     z-index: 100;
     margin-bottom: 3rem;
 }
@@ -120,4 +120,11 @@ video{
     height: 100%;
     position: absolute;
     background: rgba(0, 0, 0, 0.2);
+}
+
+/* Main */
+
+.main__titulo{
+    text-align: center;
+    font-size: 3rem;
 }
