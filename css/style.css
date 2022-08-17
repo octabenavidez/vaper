@@ -1,0 +1,123 @@
+html{
+    font-size: 62.5%;
+}
+
+/* Globales */
+
+body{
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background-color: black;
+    color: white;
+}
+
+.contenedor{
+    width: 95%;
+    margin: 0 auto;
+}
+
+@media(min-width: 768px) {
+    .contenedor{
+        max-width: 90rem;
+    }
+}
+
+/* Header */
+
+.header{
+    display: flex;
+    justify-content: center;
+    border-bottom: .5px solid white;
+}
+
+.header__logo{
+    padding: 1rem;
+}
+
+/* Nav */
+
+.navegacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media(min-width: 768px) {
+    .navegacion{
+        flex-direction: row;
+    }
+}
+
+.navegacion__enlace{
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    margin: .5rem 2rem;
+    text-align: center;
+}
+
+.navegacion__enlace:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Main */
+
+main{
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.sect{
+    max-height: 50rem;
+}
+
+
+video{
+    width: 100vh;
+}
+
+@media(min-width: 768px) {
+    video{
+        width: 100%;
+    }
+}
+
+.absolute{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    z-index: 100;
+    margin-bottom: 3rem;
+}
+
+h1::after{
+    display: block;
+    width: 30%;
+    height: 10px;
+    content: "";
+    margin: auto;
+    background-color: white;
+}
+
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+}
