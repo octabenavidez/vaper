@@ -81,7 +81,7 @@ video{
     width: 100vh;
 }
 
-@media(min-width: 768px) {
+@media(min-width: 500px) {
     video{
         width: 100%;
     }
@@ -99,13 +99,13 @@ video{
     align-items: center;
 }
 
-h1{
+.absolute h1{
     font-family: 'Roboto', sans-serif;
     z-index: 100;
     margin-bottom: 3rem;
 }
 
-h1::after{
+.absolute h1::after{
     display: block;
     width: 30%;
     height: 10px;
@@ -113,7 +113,6 @@ h1::after{
     margin: auto;
     background-color: white;
 }
-
 
 .overlay{
     width: 100%;
