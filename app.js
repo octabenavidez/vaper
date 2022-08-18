@@ -1,6 +1,9 @@
 if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
     if (document.cookie.indexOf("iphone_redirect=false") == -1){
         const sectionVideo = document.querySelector("#sectionVideo")
+        const video = document.querySelector("#bgvid")
+        video.remove();
+
         const img = document.createElement("img")
         img.setAttribute("src", "pexels-tetyana-kovyrina-937980.jpg");
         img.className = "video"
