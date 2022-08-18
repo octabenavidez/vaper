@@ -81,6 +81,7 @@ body{
 
 video{
     width: 100vh;
+    appearance: none;
 }
 
 @media(min-width: 500px) {
