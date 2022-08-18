@@ -1,10 +1,11 @@
 if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
     if (document.cookie.indexOf("iphone_redirect=false") == -1){
-        const sectionPrincipal = document.querySelector("#bgPrincipal")
-        const h1 = document.createElement("h1")
-        h1.innerText = "Hola"
+        const sectionVideo = document.querySelector("#sectionVideo")
+        const img = document.createElement("img")
+        img.setAttribute("src", "pexels-tetyana-kovyrina-937980.jpg");
+        img.className = "video"
         
-        sectionPrincipal.append(h1);
+        sectionVideo.append(img);
     } 
  }
 
@@ -22,8 +23,7 @@ if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)
 //     video.remove()
 
 //     const section = document.querySelector("#sectionVideo") 
-//     const img = document.createElement("img")
-//     img.setAttribute("src", "pexels-tetyana-kovyrina-937980.jpg");
+
 
 //     section.append(img)
 // }
