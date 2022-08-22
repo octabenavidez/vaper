@@ -10,23 +10,42 @@ if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)
         
         sectionVideo.append(img);
     } 
- }
+}
+
+let popup = localStorage.getItem('popup')
+
+if (popup === null){
+  window.addEventListener('load', () => {
+    Swal.fire({
+        title: '¿Eres mayor de 18 años?',
+        icon: 'warning',
+        width: "50em",
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si',
+        cancelButtonText: "No"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Perfecto!',
+            '',
+            'success'
+          )
+          localStorage.setItem('popup', "false")
+        } else{
+            window.location.href="https://www.google.com.ar/?hl=es";
+            localStorage.removeItem('popup')
+        }
+      })
+  });
+} 
 
 
-// if (ereg("Mobile.*Safari",$_SERVER['HTTP_USER_AGENT'])) {
-//     const sectionPrincipal = document.querySelector("#bgPrincipal")
-//     const h1 = document.createElement("h1")
-//     h1.innerText = "Hola"
-    
-//     sectionPrincipal.append(h1)
-// }
-
-// if (ereg("Mobile.*Safari",$_SERVER['HTTP_USER_AGENT'])) {
-//     const video = document.querySelector("#bgvid")
-//     video.remove()
-
-//     const section = document.querySelector("#sectionVideo") 
 
 
-//     section.append(img)
-// }
+
+
+
+
+
