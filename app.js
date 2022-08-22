@@ -12,10 +12,6 @@ if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)
     } 
 }
 
-setTimeout(function(){
-  window.location.reload(1);
-}, 30000);
-
 let popup = localStorage.getItem('popup')
 
 if (popup === null){
@@ -38,8 +34,8 @@ if (popup === null){
           )
           localStorage.setItem('popup', "false")
         } else{
-            window.location.href="https://www.google.com.ar/?hl=es";
             localStorage.removeItem('popup')
+            window.location.href="https://www.google.com.ar/?hl=es";
         }
       })
   });
