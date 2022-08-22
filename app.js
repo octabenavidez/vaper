@@ -12,6 +12,8 @@ if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)
     } 
 }
 
+
+
 let popup = localStorage.getItem('popup')
 
 if (popup === null){
