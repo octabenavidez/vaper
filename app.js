@@ -12,6 +12,10 @@ if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)
     } 
 }
 
+setTimeout(function(){
+  window.location.reload(1);
+}, 30000);
+
 let popup = localStorage.getItem('popup')
 
 if (popup === null){
