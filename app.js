@@ -12,36 +12,34 @@ if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)
     } 
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  let popup = localStorage.getItem('popup')
+let popup = localStorage.getItem('popup')
 
-  if (popup === null){
-    window.addEventListener('load', () => {
-      Swal.fire({
-          title: '¿Eres mayor de 18 años?',
-          icon: 'warning',
-          width: "50em",
-          showCancelButton: true,
-          confirmButtonColor: '#3085d6',
-          cancelButtonColor: '#d33',
-          confirmButtonText: 'Si',
-          cancelButtonText: "No"
-        }).then((result) => {
-          if (result.isConfirmed) {
-            Swal.fire(
-              'Perfecto!',
-              '',
-              'success'
-            )
-            localStorage.setItem('popup', "false")
-          } else{
-              localStorage.removeItem('popup')
-              window.location.href="https://www.google.com.ar/?hl=es";
-          }
-        })
-    });
-  } 
-})
+if (popup === null){
+  window.addEventListener('load', () => {
+    Swal.fire({
+        title: '¿Eres mayor de 18 años?',
+        icon: 'warning',
+        width: "50em",
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si',
+        cancelButtonText: "No"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Perfecto!',
+            '',
+            'success'
+          )
+          localStorage.setItem('popup', "false")
+        } else{
+            localStorage.removeItem('popup')
+            window.location.href="https://www.google.com.ar/?hl=es";
+        }
+      })
+  });
+} 
 
 
 

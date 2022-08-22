@@ -17,8 +17,14 @@
 
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        function recargar() {
+            location.reload()
+        }
+    </script>
 </head>
-<body>
+<body onunload="recargar()">
     <header class="header">
         <a href="index.html">
             <img class="header__logo" src="img/logo.png" alt="Logo SupremeVape">
