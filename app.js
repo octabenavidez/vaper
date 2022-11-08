@@ -12,6 +12,10 @@ if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)
         
         sectionVideo.append(img);
     } 
+
+    window.addEventListener('DOMContentLoaded', () => {
+      funcionSliders();
+    });
 }
 
 // Popup inicial
@@ -51,55 +55,61 @@ const slider = document.querySelectorAll('.slider');
 
 let i = 0;
 
-slider.forEach(slider => {
-  let sliderSection = slider.children;
-  let sliderSectionLast = sliderSection[sliderSection.length - 1];
-
-  let btnLeft = document.querySelectorAll('.slider__btn--left')[i];
-  let btnRight = document.querySelectorAll('.slider__btn--right')[i];
-
-  ++i
-
-  slider.insertAdjacentElement("afterbegin", sliderSectionLast);
-
-  function next() {
-    let sliderSectionFirst = slider.children[0];
-    
-    slider.style.marginLeft = "-200%";
-    slider.style.transition = "all 0.5s";
-
-    setTimeout(() => {
-      slider.style.transition = "none";
-      slider.insertAdjacentElement('beforeend', sliderSectionFirst);
-      slider.style.marginLeft = "-100%";
-    }, 500);
-  }
-
-  function prev() {
+function funcionSliders() {
+  slider.forEach(slider => {
     let sliderSection = slider.children;
     let sliderSectionLast = sliderSection[sliderSection.length - 1];
-    
-    slider.style.marginLeft = "0";
-    slider.style.transition = "all 0.5s";
-
-    setTimeout(() => {
-      slider.style.transition = "none";
-      slider.insertAdjacentElement("afterbegin", sliderSectionLast);
-      slider.style.marginLeft = "-100%";
-    }, 500);
-  }
-
-  btnRight.addEventListener("click", function(){
-    next();
-  });
   
-  btnLeft.addEventListener("click", function(){
-    prev();
+    let btnLeft = document.querySelectorAll('.slider__btn--left')[i];
+    let btnRight = document.querySelectorAll('.slider__btn--right')[i];
+  
+    ++i
+  
+    slider.insertAdjacentElement("afterbegin", sliderSectionLast);
+  
+    function next() {
+      let sliderSectionFirst = slider.children[0];
+      
+      slider.style.marginLeft = "-200%";
+      slider.style.transition = "all 0.5s";
+  
+      setTimeout(() => {
+        slider.style.transition = "none";
+        slider.insertAdjacentElement('beforeend', sliderSectionFirst);
+        slider.style.marginLeft = "-100%";
+      }, 500);
+    }
+  
+    function prev() {
+      let sliderSection = slider.children;
+      let sliderSectionLast = sliderSection[sliderSection.length - 1];
+      
+      slider.style.marginLeft = "0";
+      slider.style.transition = "all 0.5s";
+  
+      setTimeout(() => {
+        slider.style.transition = "none";
+        slider.insertAdjacentElement("afterbegin", sliderSectionLast);
+        slider.style.marginLeft = "-100%";
+      }, 500);
+    }
+  
+    btnRight.addEventListener("click", function(){
+      next();
+    });
+    
+    btnLeft.addEventListener("click", function(){
+      prev();
+    });
+  
+  
+  
   });
+}
+
+funcionSliders();
 
 
-
-});
 
 // setInterval(() => {
 //   next();
