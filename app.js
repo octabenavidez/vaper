@@ -14,6 +14,10 @@ if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)
     } 
 
     window.addEventListener('DOMContentLoaded', () => {
+      let slider = document.querySelectorAll('.slider');
+
+      let i = 0;
+
       funcionSliders();
     });
 }
@@ -51,7 +55,7 @@ if (popup === null){
 
 // Slider
 
-const slider = document.querySelectorAll('.slider');
+let slider = document.querySelectorAll('.slider');
 
 let i = 0;
 
