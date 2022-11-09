@@ -358,6 +358,10 @@ body{
     }
 }
 
+.slider__seccion{
+   width: 100%;
+}
+
 .slider{
     width: 400%;
     height: 39rem;
@@ -375,17 +379,9 @@ body{
 .slider__img{
     display: block;
     width: 100%;
-    /* max-width: 385px; */
     height: 100%;
     object-fit: cover;
 }
-
-@media(max-width: 768px) {
-    .slider__img{
-        object-fit: scale-down;
-    }
-}
-
 
 .slider__btn{
     position: absolute;
