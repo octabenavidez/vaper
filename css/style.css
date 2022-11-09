@@ -12,6 +12,11 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+/* Evitar el cuadrado azul en mobiles */
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 .contenedor{
     width: 95%;
     margin: 0 auto;
@@ -108,10 +113,6 @@ body{
     .menu-vertical li:first-child{
         border-bottom: rgb(66, 65, 65) 1px solid;
     }
-    .navegacion__grupo li:hover .menu-vertical{
-        display: block;
-        z-index: 1000;
-    }
 }
 
 .navegacion__grupo li:hover .menu-vertical{
@@ -125,9 +126,9 @@ body{
 
 }
 
-.menu-vertical li:hover{
-	background-color: black;
-}
+
+
+
 
 .menu-vertical a{
     text-decoration: none;
@@ -544,3 +545,45 @@ body{
         padding: 1rem 1rem;
     }
 }
+
+/* Promociones */
+
+.promociones{
+    margin-top: 3.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.promociones p{
+    width: 40%;
+    text-align: justify;
+}
+
+.promociones div img{
+    width: 245px;
+    border-radius: 0.4rem;
+}
+
+@media(max-width: 478px) {
+    .promociones{
+        flex-direction: column;
+    }
+    .promociones p{
+        width: 75%;
+        margin: 0 auto;
+        text-align: justify;
+    }
+
+    .promociones div{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .promociones div img{
+        width: 300px;
+    }
+}
+
+
