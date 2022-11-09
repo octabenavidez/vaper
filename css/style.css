@@ -100,7 +100,17 @@ body{
 @media(max-width: 768px) {
     .menu-vertical{
         position: static;
-        width: 100%;
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: .5rem;
+        font-weight: bold;
+    }
+    .menu-vertical li:first-child{
+        border-bottom: rgb(66, 65, 65) 1px solid;
+    }
+    .navegacion__grupo li:hover .menu-vertical{
+        display: block;
+        z-index: 1000;
     }
 }
 
@@ -112,6 +122,7 @@ body{
 .menu-vertical li{
 	display: block;
 	padding: 15px 15px 15px 20px;
+
 }
 
 .menu-vertical li:hover{
