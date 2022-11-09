@@ -25,6 +25,7 @@
     </script>
 </head>
 <body onunload="recargar()">
+    
     <header class="header">
         <a href="index.html">
             <img class="header__logo" src="img/logo.png" alt="Logo SupremeVape">
@@ -55,6 +56,23 @@
             <video class="video" autoplay loop muted playsinline id="bgvid" poster="img/pexels-tetyana-kovyrina-937980.jpg">
                 <source src="video/pexels-ivan-khmelyuk-7122120.mp4" type="video/mp4">
             </video>
+
+            <script>
+                // Comprobacion de si es iphone
+                if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+                    if (document.cookie.indexOf("iphone_redirect=false") == -1){
+                        const sectionVideo = document.querySelector("#sectionVideo")
+                        const video = document.querySelector("#bgvid")
+                        video.remove();
+
+                        const img = document.createElement("img")
+                        img.setAttribute("src", "pexels-tetyana-kovyrina-937980.jpg");
+                        img.className = "video"
+                        
+                        sectionVideo.append(img);
+                    } 
+                }
+            </script>
         </section>
     </section>
 
