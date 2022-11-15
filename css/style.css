@@ -74,6 +74,7 @@ body{
         flex-direction: row;
         border: none;
         margin-bottom: 0;
+        margin-left: 3.5rem;
     }
 }
 
@@ -125,10 +126,6 @@ body{
 	padding: 15px 15px 15px 20px;
 
 }
-
-
-
-
 
 .menu-vertical a{
     text-decoration: none;
@@ -559,11 +556,17 @@ body{
 .promociones p{
     width: 40%;
     text-align: justify;
+    font-size: 2rem;
 }
 
 .promociones div img{
     width: 245px;
     border-radius: 0.4rem;
+}
+
+.promociones div img:hover{
+    transform: scale(1.05);
+    transition: all 0.5s;
 }
 
 @media(max-width: 478px) {
@@ -574,6 +577,7 @@ body{
         width: 75%;
         margin: 0 auto;
         text-align: justify;
+        font-size: 1.6rem;
     }
 
     .promociones div{
